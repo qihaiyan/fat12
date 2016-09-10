@@ -22,3 +22,8 @@ For example, “. / dos_cp f l oppy. i mg a: f oo. t xt bar . t xt ” will copy
   4. Print out a list of files whose length in the directory entry is inconsistent with their length in the FAT. Print out the filename, its length in the dirent and its length in the FAT. For example:f oo. t xt 23567 8192 bar.txt 4721 4096
 
   5. Free any clusters that are beyond the end of a file (as indicated by the directory entry for that file). Make sure you terminate the file correctly in the FAT.
+
+There're 3 disk image files:
+* floppy1.img contains a few files and a single directory (in addition to the root directory). This is a consistent filesystem.
+* badfloppy1.img is similar to floppy1.img, but contains an unreferenced file.
+* badfloppy2.img is similar to floppy1.img but contains unreferenced files and a length inconsistency.
