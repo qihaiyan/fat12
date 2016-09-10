@@ -1,5 +1,3 @@
-/* 3005 coursework 2,   mjh, Nov 2005 */
-
 #include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>

@@ -1,4 +1,3 @@
-/* 3005 Coursework 2, mjh, Nov 2005 */
 
 #define MAXPATHLEN 255
 
