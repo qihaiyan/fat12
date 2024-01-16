@@ -144,8 +144,7 @@ uint16_t get_fat_entry(uint16_t clusternum,
     
     /* this involves some really ugly bit shifting.  This probably
        only works on a little-endian machine. */
-    offset = bpb->bpbResSectors * bpb->bpbBytesPerSec * bpb->bpbSecPerClust 
-	+ (3 * (clusternum/2));
+    offset = bpb->bpbResSectors * bpb->bpbBytesPerSec + (3 * (clusternum/2));
     switch(clusternum % 2) {
     case 0:
 	b1 = *(image_buf + offset);
@@ -171,8 +170,7 @@ void set_fat_entry(uint16_t clusternum, uint16_t value,
     
     /* this involves some really ugly bit shifting.  This probably
        only works on a little-endian machine. */
-    offset = bpb->bpbResSectors * bpb->bpbBytesPerSec * bpb->bpbSecPerClust 
-	+ (3 * (clusternum/2));
+    offset = bpb->bpbResSectors * bpb->bpbBytesPerSec + (3 * (clusternum/2));
     switch(clusternum % 2) {
     case 0:
 	p1 = image_buf + offset;
